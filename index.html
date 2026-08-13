@@ -287,6 +287,61 @@ h1 span {
     .panel { width: calc(100vw - 24px); right: 12px; top: 12px; bottom: 12px; border-radius: 20px; padding: 25px 20px; }
     .panel h2 { font-size: 26px; }
 }
+
+/* Kahoot CTA */
+.kahoot-section {
+    width: min(1200px, 100%);
+    margin: 28px auto 10px;
+    padding: 26px 28px;
+    border: 1px solid rgba(139,185,255,.22);
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(109,93,252,.12), rgba(237,78,155,.10));
+    box-shadow: 0 18px 55px rgba(0,0,0,.28);
+    text-align: center;
+}
+.kahoot-section h3 {
+    margin: 0 0 8px;
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 900;
+}
+.kahoot-section p {
+    margin: 0 0 18px;
+    color: #c4cae2;
+    line-height: 1.5;
+}
+.kahoot-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #6d5dfc, #ed4e9b);
+    border: 1px solid rgba(255,255,255,.28);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: .02em;
+    box-shadow: 0 0 24px rgba(109,93,252,.35), 0 10px 30px rgba(0,0,0,.28);
+    transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+.kahoot-btn:hover {
+    transform: translateY(-3px) scale(1.035);
+    filter: brightness(1.08);
+    box-shadow: 0 0 35px rgba(237,78,155,.48), 0 14px 35px rgba(0,0,0,.34);
+}
+.kahoot-btn:active {
+    transform: translateY(0) scale(.99);
+}
+.kahoot-btn .kahoot-icon {
+    font-size: 21px;
+}
+@media (max-width: 600px) {
+    .kahoot-section { padding: 22px 18px; }
+    .kahoot-btn { width: 100%; max-width: 320px; }
+}
+
 </style>
 </head>
 <body>
@@ -309,6 +364,19 @@ h1 span {
   <div class="orbit-container" id="orbit">
     <!-- Generado vía JS para cálculo matemático perfecto del círculo, pero renderizado como elementos HTML/SVG interactivos -->
   </div>
+</section>
+
+<!-- Kahoot: actividad de cierre -->
+<section class="kahoot-section" aria-label="Actividad Kahoot">
+  <h3>🧠 ¿Cuánto aprendiste?</h3>
+  <p>Después de explorar los 10 principios, pon a prueba tus conocimientos en nuestro Kahoot.</p>
+  <a class="kahoot-btn"
+     href="https://create.kahoot.it/share/principios-de-accion-para-el-uso-audiovisual-en-el-aula/c6a46a99-c3dc-4dbf-a2cc-0dae3c623bb4"
+     target="_blank"
+     rel="noopener noreferrer">
+    <span class="kahoot-icon">🎮</span>
+    JUGAR KAHOOT
+  </a>
 </section>
 
 <!-- Panel Lateral -->
